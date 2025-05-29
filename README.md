@@ -1,20 +1,34 @@
-# Tutorial Atualizado para Next.js 14 (App Router)
+# Compartilhando dados entre componentes React usando Context - Notas de aula de 2025
 
+## Informações gerais
 
+- **Objetivo**: Compartilhar dados entre componentes React usando _context_.
+- **Público alvo**: alunos da disciplina de POS (Programação Orientada a Serviços) do curso de Infoweb (Técnico Integrado em Informática para Internet) no CNAT-IFRN (Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus Natal-Central)
+- **Professor**: [L A Minora](https://github.com/leonardo-minora/)
+
+---
 ## Sumário
 
 1. Criando um projeto novo, adicionando libs e executando o projeto
 2. Explicando a estrutura do projeto
 3. Codificando o app
-4. Possíveis extesões deste projeto
+4. Desafios
 
+## Links
+
+- [React](https://react.dev/learn)
+  - [context](https://react.dev/learn/passing-data-deeply-with-context)
+- [Next](https://nextjs.org/docs)
+  - [routing](https://nextjs.org/docs/app/building-your-application/routing)
+- Heroicons [lista de icones](https://heroicons.com/) [docs](https://github.com/tailwindlabs/heroicons)
 ---
 
 ## Parte 1. Criando um projeto novo, adicionando libs e executando o projeto
 
 **Para criar um projeto novo**, abrir o terminal e executar o comando abaixo
 ```bash
-npx create-next-app@latest                                                                               qua 28 mai 2025 23:26:47
+npx create-next-app@latest
+
 ```
 
 responder as perguntas
@@ -34,7 +48,7 @@ npm warn Unknown user config "auto-install-peers". This will stop working in the
 
 uma saída possível
 ```bash
-$ npx create-next-app@latest                                                                               qua 28 mai 2025 23:26:47
+$ npx create-next-app@latest
 npm warn Unknown user config "auto-install-peers". This will stop working in the next major version of npm.
 ✔ What is your project named? … tarefas-context-e-route
 ✔ Would you like to use TypeScript? … No / Yes
@@ -50,7 +64,6 @@ Creating a new Next.js app in /home/minora/minora/2025/infoweb-pos/tarefas-conte
 Using npm.
 
 Initializing project with template: app-tw 
-
 
 Installing dependencies:
 - react
@@ -631,7 +644,7 @@ export default PageTarefaNova;
 
 
 ---
-## Parte 4. Possíveis extesões deste projeto
+## Parte 4. Desafios
 
 1. Filtrar as tarefas que ainda estão abertas (`concluido == false`)
 2. Possibilitar a exclusão de uma tarefa da lista
