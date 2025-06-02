@@ -32,10 +32,20 @@ const TarefasProvider = ({ children }: { children: ReactNode }) => {
 			)
 		);
 	};
+	const removerTarefa = (id: number) => {
+    setTarefas((tarefas) => tarefas.filter((tarefa) => tarefa.id !== id));
+	};
+	const editarTarefa = (id: number, novosDados: Partial<Omit<Tarefa, "id">>) => {
+    setTarefas((tarefas) =>
+        tarefas.map((tarefa) =>
+            tarefa.id === id ? { ...tarefa, ...novosDados } : tarefa
+        )
+    );
+};
 
 	return (
 		<TarefasContext.Provider
-			value={{ tarefas, adicionarTarefa, toggleConclusao }}
+			value={{ tarefas, adicionarTarefa, toggleConclusao, removerTarefa, editarTarefa }}
 		>
 			{children}
 		</TarefasContext.Provider>
